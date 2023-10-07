@@ -9,7 +9,15 @@ var i ;
 
 
 // to attach a level to the game 
+// when the keyboard key is pressed 
 $(document).keypress(function(){
+    if (started === false) {
+        // this occus only when when the started is true which is manipulated in the end by startover fn !
+        nextSequence();
+        started=true;
+}});
+// when the screen mobile is used an extra feature
+$(document).click(function(){
     if (started === false) {
         // this occus only when when the started is true which is manipulated in the end by startover fn !
         nextSequence();
